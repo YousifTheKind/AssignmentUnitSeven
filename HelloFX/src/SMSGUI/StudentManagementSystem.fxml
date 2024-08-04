@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="SMSGUI.StudentManagementSystemController">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Exit" onAction="#handleExit"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <TabPane>
+            <Tab text="Student Management">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <GridPane hgap="10" vgap="10">
+                        <Label text="Student Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                        <Label text="Student ID:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <Button text="Add Student" onAction="#handleAddStudent" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+                        <Button text="Update Student" onAction="#handleUpdateStudent" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    </GridPane>
+                    <TableView fx:id="studentTable">
+                        <columns>
+                            <TableColumn text="Name" fx:id="nameColumn"/>
+                            <TableColumn text="ID" fx:id="idColumn"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+            <Tab text="Course Enrollment">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <HBox spacing="10">
+                        <ComboBox fx:id="courseComboBox" promptText="Select Course"/>
+                        <Button text="Enroll Student" onAction="#handleEnrollStudent"/>
+                    </HBox>
+                    <TableView fx:id="courseGradeTable">
+                        <columns>
+                            <TableColumn text="Course" fx:id="courseColumn"/>
+                            <TableColumn text="Grade" fx:id="gradeColumn"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+            <Tab text="Grade Management">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <GridPane hgap="10" vgap="10">
+                        <Label text="Course:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <ComboBox fx:id="gradeCourseComboBox" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                        <Label text="Grade:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="gradeField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                        <Button text="Assign Grade" onAction="#handleAssignGrade" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+                    </GridPane>
+                </VBox>
+            </Tab>
+        </TabPane>
+    </center>
+    <bottom>
+        <Label fx:id="statusLabel" style="-fx-padding: 10;"/>
+    </bottom>
+</BorderPane>

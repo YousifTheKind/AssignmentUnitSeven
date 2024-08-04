@@ -1,0 +1,13 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/yousif/javafx-sdk-22.0.2/lib/javafx-swt.jar",
+        "/home/yousif/javafx-sdk-22.0.2/lib/javafx.base.jar",
+        "/home/yousif/javafx-sdk-22.0.2/lib/javafx.controls.jar",
+        "/home/yousif/javafx-sdk-22.0.2/lib/javafx.fxml.jar",
+        "/home/yousif/javafx-sdk-22.0.2/lib/javafx.graphics.jar",
+        "/home/yousif/javafx-sdk-22.0.2/lib/javafx.media.jar",
+        "/home/yousif/javafx-sdk-22.0.2/lib/javafx.swing.jar",
+        "/home/yousif/javafx-sdk-22.0.2/lib/javafx.web.jar"
+    ]
+}
